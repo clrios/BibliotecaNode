@@ -1,0 +1,20 @@
+{
+  "name": "bibliotecanode",
+  "version": "1.0.0",
+  "description": "Prueba heroku",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clrios/BibliotecaNode.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clrios/BibliotecaNode/issues"
+  },
+  "homepage": "https://github.com/clrios/BibliotecaNode#readme"
+}
