@@ -1,28 +1,25 @@
-var http = require('http')
 var cool = require('cool-ascii-faces');
 var express = require('express');
-var index = express();
+var app = express();
 
+app.set('port', (process.env.PORT || 5000));
 
-http.createServer(function (request, response){
-	response.writeHead(200,{"Content-Type": "text/plain"})
-	response.end("Hello World\n")
-})
-
-index.set('port', (process.env.PORT || 5000));
-
-index.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public'));
 
 // views is directory for all template files
-index.set('views', __dirname + '/views');
-index.set('view engine', 'ejs');
+app.set('views', __dirname + '/views');
+app.set('view engine', 'ejs');
 
-index.get('/', function(request, response) {
-  response.render('index');
+app.get('/', function(request, response) {
+  response.render('pages/index');
 });
 
-index.listen(index.get('port'), function() {
-  console.log('Node app is running on port', index.get('port'));
+app.get('/cool', function(request, response) {
+  response.send(cool());
+});
+
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
   console.log(process.env.BIENVENIDA);
 });
 
