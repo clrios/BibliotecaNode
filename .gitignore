@@ -1,0 +1,18 @@
+
+#modulos
+node_modules
+
+#logs
+*.log
+logs
+
+#binaries
+build/Release
+
+#config 
+.npm
+
+#runtime data
+pids
+*.pid
+*.seed
