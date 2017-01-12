@@ -3,12 +3,6 @@ var cool = require('cool-ascii-faces');
 var express = require('express');
 var app = express();
 
-
-http.createServer(function (request, response){
-	response.writeHead(200,{"Content-Type": "text/plain"})
-	response.end("Hello World\n")
-})
-
 app.set('port', (process.env.PORT || 5000));
 
 app.use(express.static(__dirname + '/public'));
