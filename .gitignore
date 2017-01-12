@@ -16,3 +16,6 @@ build/Release
 pids
 *.pid
 *.seed
+
+#variables de entorno
+.env
