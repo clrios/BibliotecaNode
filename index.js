@@ -18,7 +18,7 @@ index.set('views', __dirname + '/views');
 index.set('view engine', 'ejs');
 
 index.get('/', function(request, response) {
-  response.render('pages/index');
+  response.render('index');
 });
 
 index.listen(index.get('port'), function() {
